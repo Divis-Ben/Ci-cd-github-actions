@@ -19,7 +19,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t github-actions-ci-cd .
       - name: Run Docker container
-        run: docker -d -p 8080:80 --name test-container github-actions-ci-cd
+        run: docker run -d -p 8080:80 --name test-container github-actions-ci-cd
       
       - name: Test container 
         run: curl -f http://localhost:8080
