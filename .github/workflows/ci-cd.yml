@@ -27,4 +27,5 @@ jobs:
 
       - name: Test application
         run: |
+          sleep 5
           curl --fail http://localhost:8081
